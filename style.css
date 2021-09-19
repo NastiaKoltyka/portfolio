@@ -10,14 +10,17 @@ body {
     color: #fff;
     height: 100vh;
     overflow: hidden;
+    
 }
 
 .container {
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top 2s;
+
 }
 
 .container > div {
@@ -27,46 +30,44 @@ body {
     text-align: center;
     width: 100%;
     height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 
 div#home {
-    background-image: url(pictures/start.jpg);
+    background-image: url(pictures/peakpx.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #first-project {
     justify-content: flex-start;
-    display: flex;
 }
-.project-one-picture {
-    width: 30%;
-    height: 80%;
-    background-image: url(pictures/694281_1584394475.jpg);
+.project-two-picture, .project-one-picture {
+    width: 46%;
+    height: 60%;
+    background-image: url(pictures/kisspng-laptop-macbook-pro-macbook-air-apple-computer-screen-5acd2fc7940699.8851771815233965516063.png);
     background-position: center;
     margin-left: 70px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     opacity: 0.2;
     z-index: 1;
-    transition: opacity, 2s;
+    transition: opacity, 0.3s;
+    border-radius: 5px;
 }
 
 .two-text-container, .one-text-container {
     height: 280px;
     width: 30%;
-    background: linear-gradient(90deg, #f598a8, #f6edb2);
+    background: linear-gradient(to right, #ef3b36, #ffffff); 
     color: black;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    position: absolute;
     right: 30%;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0;
     transition: left,  width,  2s;
     overflow: hidden;
 }
@@ -75,18 +76,13 @@ div#home {
     justify-content: flex-end;
 }
 .project-two-picture {
-    width: 30%;
-    height: 80%;
-    margin-right: 70px;
-    background-image: url(pictures/unnamed.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.2;
-    z-index: 1;
-    transition: opacity, 2s;
+    margin: 0px 70px 0px -87px;
 }
 .two-text-container{
-    background: linear-gradient(90deg, #aea4e3, #d3ffe8);
+    background: linear-gradient(to right, #c0c0aa, #1cefff);
     left: 30%;
+}
+video{
+    position: relative;
+    top: 31px;
 }
