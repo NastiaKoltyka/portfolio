@@ -2,7 +2,8 @@ let picture = document.querySelectorAll('.picture');
 let text = document.querySelectorAll('.text');
 const main = document.querySelector('.container');
 let items = document.querySelectorAll('.items').length;
-let button = document.querySelector('.btn');
+let buttonDown = document.querySelector('.btn');
+let buttonUp=document.querySelector('.btn-up');
 let page = 0;
 let active = true;
 
@@ -44,5 +45,14 @@ const changePage = () => {
     }
 
 }
+const scrollUp = () => {
+    page = 0;
+    main.style.top = `${-window.innerHeight*0}px`;
+        active = false;
+        setTimeout(() => {
+            active = true;
+        }, 2000);
+};
 main.addEventListener("wheel", scroll);
-button.addEventListener("click", scrollDown);
+buttonDown.addEventListener("click", scrollDown);
+buttonUp.addEventListener("click", scrollUp);

@@ -108,7 +108,7 @@ video {
     position: relative;
     top: 31px;
 }
-.btn {
+.btn, .btn-up {
     width: 100px;
     height: 50px;
     border: none;
@@ -121,9 +121,32 @@ video {
     background-color: #f0f8ff00;
     cursor: pointer;
 }
-.btn:hover {
+.btn:hover, .btn-up:hover {
     color: rgb(158, 156, 156);
 }
+.btn-up{
+    position: relative;
+    top: calc(50vh - 47px);
+    left: 0;
+}
+a{
+    color: black;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-top: 10px;
+}
+a:link {
+    font-weight: bold;
+}
+a:visited {
+    color: rgb(83, 81, 81);
+}
+
+
+
+
 @media (max-width: 1200px) {
     .text {
         height: 20%;
